@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/view_map"
+        android:title="지도보기"
+        app:showAsAction="always|withText" />
+
+    <item android:id="@+id/add_music_action"
+        android:title="추가"
+        app:showAsAction="always|withText"/>
+
+    <item android:id="@+id/remove_music_action"
+        android:title="삭제"
+        app:showAsAction="always|withText"/>
+
+
+</menu>

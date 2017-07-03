@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.joju.myapplication7">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:configChanges="orientation"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Dynamic Player"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCK7ysO5j4fgpFh0mVR9rojyT0-jMG6P0M" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+            <intent-filter android:label="내꺼">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+
+
+        </activity>
+
+        <activity android:name=".MusicChartActivity"
+            android:label="Music List">
+
+            <intent-filter android:label="My MusicChart">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".MusicPlayingActivity"
+            android:label="Playing..."
+            android:configChanges="orientation|screenSize|keyboardHidden">
+
+            <intent-filter>
+            <action android:name="com.example.joju" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".MyPlayList1"
+            android:label="재생목록 1">
+
+            <intent-filter>
+                <action android:name="com.example.joju" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".MyPlayList2"
+            android:label="재생목록 2">
+
+            <intent-filter>
+                <action android:name="com.example.joju" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".RecentPlayedList"
+            android:label="최근 재생 목록"/>
+
+        <activity android:name=".FeelingActivity"
+            android:label="감상평">
+
+            <intent-filter>
+            <action android:name="com.example.joju" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".RythmGameActivity"
+            android:label="리듬 게임"/>
+
+        <activity android:name=".MapViewer"
+            android:label="음반 판매처"/>
+
+    </application>
+</manifest>
